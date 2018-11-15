@@ -26,4 +26,5 @@ public class Target : MonoBehaviour {
     public void die() {
         Destroy(this.gameObject);
     }
+
 }

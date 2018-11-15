@@ -24,7 +24,7 @@ public class Gun : MonoBehaviour {
 
         if (Input.GetMouseButton(0)) {
             shoot();
-            Debug.Log("Button Down!!");
+            //Debug.Log("Button Down!!");
         }
 
         if (Input.GetMouseButtonUp(0)) {
@@ -35,8 +35,6 @@ public class Gun : MonoBehaviour {
 
     void shoot() {
 
-       
-
         RaycastHit hit;
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -44,10 +42,20 @@ public class Gun : MonoBehaviour {
             //Debug.Log(hit.transform.name);
 
             Target target = hit.transform.GetComponent<Target>();
+            MinionsController minions = hit.transform.GetComponent<MinionsController>();
 
             if (target != null) {
+                Debug.Log("tidak null");
                 target.takeDamage(damage);
             }
+
+            if (minions != null)
+            {
+                Debug.Log("tidak null");
+                minions.takeDamage(damage);
+            }
+
+
 
         }
 

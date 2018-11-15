@@ -255,6 +255,7 @@
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\MinionsController.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
   </ItemGroup>
   <ItemGroup>
