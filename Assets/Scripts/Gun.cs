@@ -55,9 +55,6 @@ public class Gun : MonoBehaviour {
             nextTimeToFire = Time.time + 1 / fireRate;
             shoot();
         }
-
-        
-
 	}
 
     IEnumerator reload() {
@@ -113,6 +110,7 @@ public class Gun : MonoBehaviour {
 
             if (target != null) {
                 target.takeDamage(damage);
+
             }
 
             if (hit.rigidbody != null) {

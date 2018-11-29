@@ -259,6 +259,7 @@
     <Compile Include="Assets\Scripts\Target.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\FREEUIASSETPACK_BY@CAMTATZ\ReadMe.txt" />
     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\JMO Assets\WarFX\!WarFX Readme.txt" />
