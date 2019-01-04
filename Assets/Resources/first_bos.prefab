@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4683661604305280}
   - component: {fileID: 137830440435526492}
+  - component: {fileID: 65303051977448688}
   m_Layer: 0
   m_Name: MESH
   m_TagString: Untagged
@@ -156,6 +157,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4899362546134160}
   - component: {fileID: 95161618103233830}
+  - component: {fileID: 195741322585094550}
+  - component: {fileID: 114324118014132902}
   m_Layer: 0
   m_Name: first_bos
   m_TagString: Untagged
@@ -640,9 +643,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1346444113363174}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.775116, y: 1.6, z: 89.26455}
-  m_LocalScale: {x: 600, y: 600, z: 600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.775116, y: -0.03, z: 82.63}
+  m_LocalScale: {x: 130, y: 130, z: 130}
   m_Children:
   - {fileID: 4683661604305280}
   - {fileID: 4614227447129724}
@@ -708,6 +711,18 @@ Transform:
   m_Father: {fileID: 4986217354545152}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65303051977448688
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055425922223236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.02}
+  m_Center: {x: -0.0000000018694621, y: 0.011538759, z: 0.001660134}
 --- !u!95 &95161618103233830
 Animator:
   serializedVersion: 3
@@ -725,6 +740,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114324118014132902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346444113363174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b39e94fd0f720840a6b191a928278bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  timeFire: 2
+  time: 0
 --- !u!137 &137830440435526492
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -783,3 +812,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.007755317, y: 0.0022234973, z: -0.0000000027939677}
     m_Extent: {x: 0.013625186, y: 0.010196456, z: 0.013846097}
   m_DirtyAABB: 0
+--- !u!195 &195741322585094550
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346444113363174}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.01
+  m_Speed: 3
+  m_Acceleration: 25
+  avoidancePriority: 1
+  m_AngularSpeed: 150
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

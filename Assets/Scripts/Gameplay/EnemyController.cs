@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Player = GameObject.Find("Player");
         timer = 4;
         wanderTime = 5f;
         wanderRadius = 1000;
@@ -72,6 +73,8 @@ public class EnemyController : MonoBehaviour {
 
     public void die()
     {
+        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.amountMinionsKilled++;
         Destroy(this.gameObject);
     }
 

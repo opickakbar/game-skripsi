@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour {
     public float timeCreateMinions = 6f;
     public float timeGame = 0;
 
+    public float amountMinionsKilled = 0;
+
+    private bool bosCreated = false;
+
 	// Use this for initialization
 	void Start () {
        
@@ -21,10 +25,20 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         Gun gun = GameObject.FindGameObjectWithTag("Gun").GetComponent<Gun>();
         bulletText.text = gun.currentAmmo.ToString() +  "/" + gun.maxAmmo.ToString();
-        timeGame += 1 * Time.deltaTime;
-        if (timeGame >= timeCreateMinions) {
-            createMinions();
-            timeGame = 0;
+        if (!bosCreated) {
+            timeGame += 1 * Time.deltaTime;
+            if (timeGame >= timeCreateMinions)
+            {
+                createMinions();
+                timeGame = 0;
+            }
+        }
+
+        //cek kalo minion yang kebunuh udah lebih dari sama dengan 30
+        if (amountMinionsKilled >= 30 && !bosCreated) {
+            //munculin bos
+            createBos();
+            bosCreated = true;
         }
     }
 
@@ -35,6 +49,12 @@ public class GameManager : MonoBehaviour {
             minion.GetComponent<EnemyController>().Player = GameObject.Find("Player");
           //  Debug.Log("minion's been created!");
         }
-       
+    }
+
+    void createBos() {
+        GameObject bos = (GameObject)Instantiate(Resources.Load("first_bos")) as GameObject;
+        Vector3 bosPosition = new Vector3(50, 2, 115);
+        bos.transform.position = bosPosition;
+        
     }
 }

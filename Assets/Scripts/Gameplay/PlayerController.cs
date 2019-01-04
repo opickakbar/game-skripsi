@@ -22,6 +22,13 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.gameObject.tag == "minion") {
+            healthPlayer -= 0.5f;
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.transform.gameObject.tag == "minion")
